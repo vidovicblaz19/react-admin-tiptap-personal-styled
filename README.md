@@ -1,1 +1,1 @@
-# Monorepo PayloadCMS and React-Router 7 Template
+# Monorepo React-admin with themed styled tiptap editor.
