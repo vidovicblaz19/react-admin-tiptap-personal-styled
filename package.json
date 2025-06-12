@@ -1,0 +1,27 @@
+{
+  "name": "@vidovicblaz19/flight-stack-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "clean": "turbo run clean && rm -rf node_modules",
+    "build": "turbo run build",
+    "serve": "turbo run serve",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "typescript": "5.7.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "keywords": [],
+  "author": "vidovicblaz19",
+  "license": "MIT",
+  "packageManager": "pnpm@10.11.0"
+}

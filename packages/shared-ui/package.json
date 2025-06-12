@@ -1,0 +1,45 @@
+{
+  "name": "@vidovicblaz19/shared-ui",
+  "version": "1.0.0",
+  "description": "",
+  "sideEffects": false,
+  "main": "./src/index.tsx",
+  "exports": {
+    ".": {
+      "types": "./src/index.tsx",
+      "import": "./src/index.tsx",
+      "require": "./src/index.tsx"
+    },
+    "./theme.ts": {
+      "types": "./src/theme.ts",
+      "import": "./src/theme.ts",
+      "require": "./src/theme.ts"
+    },
+    "./styles.css": {
+      "import": "./src/styles/ui.css",
+      "require": "./src/styles/ui.css"
+    }
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "clean": "rm -rf node_modules dist .turbo",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx ./src",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "@mui/material": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "@mui/material": "^7.0.1"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "keywords": [],
+  "author": "vidovicblaz19",
+  "license": "MIT",
+  "packageManager": "pnpm@10.11.0"
+}

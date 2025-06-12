@@ -1,0 +1,28 @@
+{
+    "$schema": "./node_modules/turbo/schema.json",
+    "tasks": {
+        "build": {
+            "cache": false,
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**", "build/**"]
+        },
+        "lint": {
+            "outputs": []
+        },
+        "dev": {
+            "cache": false
+        },
+        "clean": {
+            "cache": false
+        },
+        "serve": {
+            "cache": false,
+            "dependsOn": ["^serve"]
+        }
+    },
+    "globalEnv": [
+        "NODE_ENV",
+        "PORT",
+        "POSTGRES_DB_URL"
+    ]
+}
