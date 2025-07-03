@@ -25,9 +25,9 @@ export const App = () => (
             i18nProvider={defaultI18nProvider}
             loginPage={LoginPage}
         >
-            <Resource name="categories" recordRepresentation={(record) => record.type} list={ListGuesser} edit={CategoryEdit} create={CategoryCreate} show={CategoryShow} />
-            <Resource name="categories_translations" recordRepresentation={(record) => record.headline} list={ListGuesser} edit={CategoryTranslationEdit} create={CategoryTranslationCreate} show={CategoryTranslationShow} />
-            <Resource name="languages" recordRepresentation={(record) => record.headline} list={ListGuesser} edit={EditGuesser} create={CreateGuesser} show={ShowGuesser} />
+            <Resource name="categories" recordRepresentation="type" list={ListGuesser} edit={CategoryEdit} create={CategoryCreate} show={CategoryShow} />
+            <Resource name="categories_translations" recordRepresentation="headline" list={ListGuesser} edit={CategoryTranslationEdit} create={CategoryTranslationCreate} show={CategoryTranslationShow} />
+            <Resource name="languages" recordRepresentation="headline" list={ListGuesser} edit={EditGuesser} create={CreateGuesser} show={ShowGuesser} />
 
             <CustomRoutes noLayout>
                 <Route path={SetPasswordPage.path} element={<SetPasswordPage />} />
