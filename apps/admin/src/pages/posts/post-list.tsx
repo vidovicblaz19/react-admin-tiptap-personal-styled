@@ -1,4 +1,4 @@
-import { Datagrid, DateField, DateInput, List, ReferenceField, TextField, TextInput } from 'react-admin';
+import { DataTable, DateField, DateInput, List, ReferenceField, TextField, TextInput } from 'react-admin';
 
 const filters = [
     <TextInput source="id" />,
@@ -8,11 +8,13 @@ const filters = [
 
 export const PostList = () => (
     <List filters={filters}>
-        <Datagrid>
-            <TextField source="id" />
-            <DateField source="created_at" />
-            <TextField source="title" />
-            <ReferenceField source="tags" reference="categories" />
-        </Datagrid>
+        <DataTable>
+            <DataTable.Col source="id" />
+            <DataTable.Col source="created_at" />
+            <DataTable.Col source="title" />
+            <DataTable.Col label="Tags">
+                <ReferenceField source="tags" reference="categories" />
+            </DataTable.Col>
+        </DataTable>
     </List>
 );
